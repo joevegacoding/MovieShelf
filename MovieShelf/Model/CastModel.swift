@@ -14,7 +14,7 @@ struct CastResult: Decodable {
 }
 
 struct Cast: Decodable {
-    let cast_id: Int?
+    let id: Int
     let name: String?
     let character: String?
     var profile_path: String?

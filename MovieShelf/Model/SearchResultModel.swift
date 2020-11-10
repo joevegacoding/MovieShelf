@@ -11,11 +11,10 @@ import Foundation
 
 struct SearchResult: Decodable {
     let results: [Result]
-    
 }
 
 struct Result: Decodable {
-    let original_title: String?
+    let title: String?
     let release_date: String?
     var poster_path: String?
     var backdrop_path: String?

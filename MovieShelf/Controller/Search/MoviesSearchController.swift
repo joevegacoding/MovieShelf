@@ -29,7 +29,7 @@ UISearchBarDelegate {
         let movieResult = movieResults[indexPath.item]
         let movieDetailsController = MovieDetailsController()
         movieDetailsController.searchResult = movieResult
-        movieDetailsController.navigationItem.title = movieResult.original_title
+        movieDetailsController.navigationItem.title = movieResult.title
         
         self.navigationController?.pushViewController(movieDetailsController, animated: true)
     }

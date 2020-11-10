@@ -9,7 +9,6 @@
 import UIKit
 
 class PreviewController: HorizontalSnappingController, UICollectionViewDelegateFlowLayout{
-    
     var searchResult: Result!
     fileprivate var backdropArray = [Backdrops]()
     let cellId = "cellId"
@@ -39,6 +38,11 @@ class PreviewController: HorizontalSnappingController, UICollectionViewDelegateF
         collectionView.backgroundColor = .systemBackground
     }
     
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//        ImageCastCell. = self.view.frame
+    }
+
+    
     func getSetup() {
         setup()
     }
@@ -50,7 +54,7 @@ class PreviewController: HorizontalSnappingController, UICollectionViewDelegateF
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return backdropArray.count
     }
-    
+
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! ScreenshotCell
         
@@ -68,7 +72,7 @@ fileprivate extension PreviewController {
     
     func getData() {
         
-        let urlString = "https://api.themoviedb.org/3/movie/\(searchResult.id)/images?api_key=6c585d930b6b55e72e3e31c6506a6ee4"
+        let urlString = "https://api.themoviedb.org/3/movie/\(searchResult.id)/images?api_key=\(Constants.apiKey)"
         
         Service.sharedService.fetchGenericJSONData(urlString: urlString) { [weak self](result: BackdropResult?, error) in
             
@@ -80,6 +84,5 @@ fileprivate extension PreviewController {
                 theSelf.collectionView.reloadData()
             }
         }
-    }    
+    }
 }
-

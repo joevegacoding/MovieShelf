@@ -17,7 +17,6 @@ class BaseTabBarController: UITabBarController {
             createNavController(viewController: DiscoverViewController(), title: "Home", imageName: "Home"),
             createNavController(viewController: MoviesSearchController(), title: "Search", imageName: "search")
         ]
-        
     }
     
     fileprivate func createNavController(viewController: UIViewController, title: String, imageName: String) -> UIViewController {
@@ -29,7 +28,6 @@ class BaseTabBarController: UITabBarController {
         navController.tabBarItem.image = UIImage(named: imageName)
         
         return navController
-        
     }
     
 }

@@ -10,22 +10,20 @@ import Foundation
 
 class Service {
     
-    fileprivate let apiKey = "API_KEY"
     static let sharedService = Service() //Singleton object
     
     func fetchMovieSearch(searchTerm: String, completion: @escaping (SearchResult?, Error?) -> ()) {
         
-        let urlString = "https://api.themoviedb.org/3/search/movie?api_key=\(apiKey)&query=\(searchTerm)"
+        let urlString = "https://api.themoviedb.org/3/search/movie?api_key=\(Constants.apiKey)&query=\(searchTerm)"
         fetchGenericJSONData(urlString: urlString, completion: completion)
     }
 }
 
 extension Service {
     
-    
     func fetchTrendingMovies(completion: @escaping ([Result], Error?) -> ()) {
         
-        let urlString = "https://api.themoviedb.org/3/trending/movie/day?api_key=\(apiKey)"
+        let urlString = "https://api.themoviedb.org/3/trending/movie/day?api_key=\(Constants.apiKey)"
         guard let url = URL(string: urlString) else { return }
         //fetch the data from the internet
         URLSession.shared.dataTask(with: url) { (data, response, error) in
@@ -51,7 +49,7 @@ extension Service {
     }
     func fetchGenres(completion: @escaping ([Genres], Error?) -> ()) {
         
-        let urlGenres = "https://api.themoviedb.org/3/genre/movie/list?api_key=\(apiKey)&language=en-US"
+        let urlGenres = "https://api.themoviedb.org/3/genre/movie/list?api_key=\(Constants.apiKey)&language=en-US"
         guard let url = URL(string: urlGenres) else { return }
         
         //fetch the data from the server
@@ -79,22 +77,22 @@ extension Service {
     }
     
     func fetchDiscoverActionAdventure(completion: @escaping (SearchResult?, Error?) -> ()) {
-        let urlStringDiscover = "https://api.themoviedb.org/3/discover/movie?api_key=\(apiKey)&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_genres=12,28"
+        let urlStringDiscover = "https://api.themoviedb.org/3/discover/movie?api_key=\(Constants.apiKey)&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_genres=12,28"
         fetcDiscoverGroup(urlStringDiscover: urlStringDiscover, completion: completion)
     }
     
     func fetchComedy(completion: @escaping (SearchResult?, Error?) -> ()) {
         
-        fetcDiscoverGroup(urlStringDiscover: "https://api.themoviedb.org/3/discover/movie?api_key=\(apiKey)&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_genres=35", completion: completion)
+        fetcDiscoverGroup(urlStringDiscover: "https://api.themoviedb.org/3/discover/movie?api_key=\(Constants.apiKey)&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_genres=35", completion: completion)
     }
     
     func fetchScienceFiction(completion: @escaping (SearchResult?, Error?) -> ()) {
-        fetcDiscoverGroup(urlStringDiscover: "https://api.themoviedb.org/3/discover/movie?api_key=\(apiKey)&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_genres=878", completion: completion)
+        fetcDiscoverGroup(urlStringDiscover: "https://api.themoviedb.org/3/discover/movie?api_key=\(Constants.apiKey)&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_genres=878", completion: completion)
     }
     
     func fetchHorrors(completion: @escaping (SearchResult?, Error?) -> ()) {
         
-        fetcDiscoverGroup(urlStringDiscover: "https://api.themoviedb.org/3/discover/movie?api_key=\(apiKey)&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_genres=27", completion: completion)
+        fetcDiscoverGroup(urlStringDiscover: "https://api.themoviedb.org/3/discover/movie?api_key=\(Constants.apiKey)&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_genres=27", completion: completion)
     }
     
     //helper

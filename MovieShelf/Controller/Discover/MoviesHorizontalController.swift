@@ -36,7 +36,7 @@ class MoviesHorizontalController: HorizontalSnappingController, UICollectionView
             } else if mode == .fullscreen {
                 let movieDetailsController = MovieDetailsController()
                 movieDetailsController.searchResult = movie
-                movieDetailsController.navigationItem.title = movie.original_title
+                movieDetailsController.navigationItem.title = movie.title
                 movieDetailsController.navigationItem.largeTitleDisplayMode = .automatic
                 
                 present(movieDetailsController, animated: true, completion: nil)
@@ -78,7 +78,7 @@ class MoviesHorizontalController: HorizontalSnappingController, UICollectionView
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! MovieRowCell
         
         let discover = searchResult?.results[indexPath.item]
-        cell.titleLabel.text = discover?.original_title
+        cell.titleLabel.text = discover?.title
         cell.releaseDateLabel.text = discover?.release_date
         cell.imageView.sd_setImage(with: URL(string: "https://image.tmdb.org/t/p/w500/\(discover?.poster_path ?? "")" ))
         

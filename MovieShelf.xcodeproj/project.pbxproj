@@ -10,6 +10,11 @@
 		A2436F9B670912017D729861 /* Pods_MovieShelf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 583976234EF2689DE5C63C11 /* Pods_MovieShelf.framework */; };
 		E903559F24A12F7800476EE9 /* VerticalStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E903559E24A12F7800476EE9 /* VerticalStackView.swift */; };
 		E9047BCB24A807FE000B483C /* PreviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9047BCA24A807FE000B483C /* PreviewController.swift */; };
+		E91AC13824BA3AB400F2B680 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91AC13724BA3AB400F2B680 /* Constants.swift */; };
+		E91AC13C24BA475100F2B680 /* VideosModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91AC13B24BA475100F2B680 /* VideosModel.swift */; };
+		E92563FB24BAA416000253FB /* CastPageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92563FA24BAA416000253FB /* CastPageCell.swift */; };
+		E92DDD3724BA833A0001DE8D /* CastDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92DDD3624BA833A0001DE8D /* CastDetailsController.swift */; };
+		E92DDD3924BA86310001DE8D /* PersonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92DDD3824BA86310001DE8D /* PersonModel.swift */; };
 		E931DEC824AF5D3700404F3E /* MoviePageHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E931DEC724AF5D3700404F3E /* MoviePageHeader.swift */; };
 		E931DECA24AF656600404F3E /* HeaderHorizontalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E931DEC924AF656600404F3E /* HeaderHorizontalController.swift */; };
 		E931DECC24AF680900404F3E /* MovieHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E931DECB24AF680900404F3E /* MovieHeaderCell.swift */; };
@@ -38,6 +43,11 @@
 		E986988A24A11AE00001AEA6 /* MyBaseListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E986988924A11AE00001AEA6 /* MyBaseListController.swift */; };
 		E98FFE7F24AA927E00112E95 /* BaseListControllerMovieDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98FFE7E24AA927E00112E95 /* BaseListControllerMovieDetail.swift */; };
 		E9A8898324A8017B006BC3ED /* PreviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A8898224A8017B006BC3ED /* PreviewCell.swift */; };
+		E9A97974255B1E080001E371 /*  CastImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A97973255B1E080001E371 /*  CastImageModel.swift */; };
+		E9A97977255B1E9D0001E371 /* ImageCastCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A97976255B1E9D0001E371 /* ImageCastCell.swift */; };
+		E9A9797A255B1EBE0001E371 /* FullScreenCastImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A97979255B1EBE0001E371 /* FullScreenCastImageCell.swift */; };
+		E9A9797D255B1F2B0001E371 /* CastImageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A9797C255B1F2B0001E371 /* CastImageController.swift */; };
+		E9A97980255B1F450001E371 /* FullScreenCastImageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A9797F255B1F450001E371 /* FullScreenCastImageController.swift */; };
 		E9B137CB24A3BCB400A480A8 /* MovieDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B137CA24A3BCB400A480A8 /* MovieDetailsController.swift */; };
 		E9B137CD24A3C38D00A480A8 /* CastModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B137CC24A3C38D00A480A8 /* CastModel.swift */; };
 		E9B137CF24A3C4A200A480A8 /* GenreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B137CE24A3C4A200A480A8 /* GenreModel.swift */; };
@@ -51,6 +61,11 @@
 		9382346641E07161882E3544 /* Pods-MovieShelf.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieShelf.debug.xcconfig"; path = "Target Support Files/Pods-MovieShelf/Pods-MovieShelf.debug.xcconfig"; sourceTree = "<group>"; };
 		E903559E24A12F7800476EE9 /* VerticalStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalStackView.swift; sourceTree = "<group>"; };
 		E9047BCA24A807FE000B483C /* PreviewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewController.swift; sourceTree = "<group>"; };
+		E91AC13724BA3AB400F2B680 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		E91AC13B24BA475100F2B680 /* VideosModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosModel.swift; sourceTree = "<group>"; };
+		E92563FA24BAA416000253FB /* CastPageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastPageCell.swift; sourceTree = "<group>"; };
+		E92DDD3624BA833A0001DE8D /* CastDetailsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastDetailsController.swift; sourceTree = "<group>"; };
+		E92DDD3824BA86310001DE8D /* PersonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonModel.swift; sourceTree = "<group>"; };
 		E931DEC724AF5D3700404F3E /* MoviePageHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviePageHeader.swift; sourceTree = "<group>"; };
 		E931DEC924AF656600404F3E /* HeaderHorizontalController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderHorizontalController.swift; sourceTree = "<group>"; };
 		E931DECB24AF680900404F3E /* MovieHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieHeaderCell.swift; sourceTree = "<group>"; };
@@ -81,6 +96,11 @@
 		E986988924A11AE00001AEA6 /* MyBaseListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBaseListController.swift; sourceTree = "<group>"; };
 		E98FFE7E24AA927E00112E95 /* BaseListControllerMovieDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseListControllerMovieDetail.swift; sourceTree = "<group>"; };
 		E9A8898224A8017B006BC3ED /* PreviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewCell.swift; sourceTree = "<group>"; };
+		E9A97973255B1E080001E371 /*  CastImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " CastImageModel.swift"; sourceTree = "<group>"; };
+		E9A97976255B1E9D0001E371 /* ImageCastCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCastCell.swift; sourceTree = "<group>"; };
+		E9A97979255B1EBE0001E371 /* FullScreenCastImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenCastImageCell.swift; sourceTree = "<group>"; };
+		E9A9797C255B1F2B0001E371 /* CastImageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastImageController.swift; sourceTree = "<group>"; };
+		E9A9797F255B1F450001E371 /* FullScreenCastImageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenCastImageController.swift; sourceTree = "<group>"; };
 		E9B137CA24A3BCB400A480A8 /* MovieDetailsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsController.swift; sourceTree = "<group>"; };
 		E9B137CC24A3C38D00A480A8 /* CastModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastModel.swift; sourceTree = "<group>"; };
 		E9B137CE24A3C4A200A480A8 /* GenreModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreModel.swift; sourceTree = "<group>"; };
@@ -156,6 +176,7 @@
 		E986984D24A1176B0001AEA6 /* MovieShelf */ = {
 			isa = PBXGroup;
 			children = (
+				E91AC13724BA3AB400F2B680 /* Constants.swift */,
 				E986986224A1178D0001AEA6 /* Networking */,
 				E986986824A118100001AEA6 /* Helpers */,
 				E986986524A117D40001AEA6 /* Model */,
@@ -186,6 +207,9 @@
 				E9B137CC24A3C38D00A480A8 /* CastModel.swift */,
 				E9B137CE24A3C4A200A480A8 /* GenreModel.swift */,
 				E9FF4A1E24A8CE59002CE6FE /* PreviewModel.swift */,
+				E91AC13B24BA475100F2B680 /* VideosModel.swift */,
+				E92DDD3824BA86310001DE8D /* PersonModel.swift */,
+				E9A97973255B1E080001E371 /*  CastImageModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -265,8 +289,11 @@
 			children = (
 				E9B137CA24A3BCB400A480A8 /* MovieDetailsController.swift */,
 				E9836B0224A561B8009ECB94 /* CastHorizontalController.swift */,
+				E92DDD3624BA833A0001DE8D /* CastDetailsController.swift */,
 				E9047BCA24A807FE000B483C /* PreviewController.swift */,
 				E98FFE7E24AA927E00112E95 /* BaseListControllerMovieDetail.swift */,
+				E9A9797F255B1F450001E371 /* FullScreenCastImageController.swift */,
+				E9A9797C255B1F2B0001E371 /* CastImageController.swift */,
 			);
 			path = MovieDetails;
 			sourceTree = "<group>";
@@ -278,6 +305,9 @@
 				E93E55CB24A56748007CFD72 /* CastDetailsCell.swift */,
 				E9A8898224A8017B006BC3ED /* PreviewCell.swift */,
 				E969231324AA78B600E6E3CF /* HeaderCell.swift */,
+				E92563FA24BAA416000253FB /* CastPageCell.swift */,
+				E9A97976255B1E9D0001E371 /* ImageCastCell.swift */,
+				E9A97979255B1EBE0001E371 /* FullScreenCastImageCell.swift */,
 			);
 			path = Details;
 			sourceTree = "<group>";
@@ -311,7 +341,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1150;
-				LastUpgradeCheck = 1150;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = "Joseph Bouhanef";
 				TargetAttributes = {
 					E986984A24A1176B0001AEA6 = {
@@ -398,10 +428,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				E986986A24A118290001AEA6 /* UIVIew+Layout.swift in Sources */,
+				E91AC13824BA3AB400F2B680 /* Constants.swift in Sources */,
 				E986987F24A11A240001AEA6 /* MoviesSearchController.swift in Sources */,
+				E9A97974255B1E080001E371 /*  CastImageModel.swift in Sources */,
+				E91AC13C24BA475100F2B680 /* VideosModel.swift in Sources */,
 				E9B137CB24A3BCB400A480A8 /* MovieDetailsController.swift in Sources */,
 				E93E55CC24A56748007CFD72 /* CastDetailsCell.swift in Sources */,
+				E92DDD3924BA86310001DE8D /* PersonModel.swift in Sources */,
 				E97B773424A3AB1D0005C7C3 /* BetterSnappingLayout.swift in Sources */,
+				E9A9797A255B1EBE0001E371 /* FullScreenCastImageCell.swift in Sources */,
+				E92DDD3724BA833A0001DE8D /* CastDetailsController.swift in Sources */,
+				E9A9797D255B1F2B0001E371 /* CastImageController.swift in Sources */,
 				E9FF4A1F24A8CE59002CE6FE /* PreviewModel.swift in Sources */,
 				E986986724A117F90001AEA6 /* SearchResultModel.swift in Sources */,
 				E986988224A11A5A0001AEA6 /* DiscoverViewController.swift in Sources */,
@@ -411,7 +448,9 @@
 				E986987124A118FE0001AEA6 /* SearchResultsCell.swift in Sources */,
 				E986984F24A1176B0001AEA6 /* AppDelegate.swift in Sources */,
 				E903559F24A12F7800476EE9 /* VerticalStackView.swift in Sources */,
+				E9A97980255B1F450001E371 /* FullScreenCastImageController.swift in Sources */,
 				E9B137CD24A3C38D00A480A8 /* CastModel.swift in Sources */,
+				E9A97977255B1E9D0001E371 /* ImageCastCell.swift in Sources */,
 				E98FFE7F24AA927E00112E95 /* BaseListControllerMovieDetail.swift in Sources */,
 				E969231724AA830C00E6E3CF /* StretchyHeaderLayout.swift in Sources */,
 				E931DECC24AF680900404F3E /* MovieHeaderCell.swift in Sources */,
@@ -426,6 +465,7 @@
 				E9B137CF24A3C4A200A480A8 /* GenreModel.swift in Sources */,
 				E931DECA24AF656600404F3E /* HeaderHorizontalController.swift in Sources */,
 				E986987524A119600001AEA6 /* DiscoverResultsCell.swift in Sources */,
+				E92563FB24BAA416000253FB /* CastPageCell.swift in Sources */,
 				E9047BCB24A807FE000B483C /* PreviewController.swift in Sources */,
 				E97B773224A397030005C7C3 /* HorizontalSnappingController.swift in Sources */,
 				E931DEC824AF5D3700404F3E /* MoviePageHeader.swift in Sources */,
@@ -480,6 +520,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -541,6 +582,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;

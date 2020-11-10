@@ -13,7 +13,6 @@ class HeaderCell: UICollectionReusableView {
     let imageView = UIImageView(cornerRadius: 10)
     let heavyLabel = UILabel(text: "Images", font: .boldSystemFont(ofSize: 25), numberOfLines: 0)
     
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
         

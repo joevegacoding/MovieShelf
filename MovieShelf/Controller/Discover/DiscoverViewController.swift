@@ -51,11 +51,11 @@ class DiscoverViewController: BaseListController, UICollectionViewDelegateFlowLa
         header.appHeaderHorozzontalController.movieResult = self.movieResult
         header.appHeaderHorozzontalController.collectionView.reloadData()
         
-          header.appHeaderHorozzontalController.didSelectHandler = { [weak self] searchResult in
-                   let movieDetailsController = MovieDetailsController()
-                   movieDetailsController.searchResult = searchResult
-                   movieDetailsController.view.backgroundColor = .systemBackground
-                   self?.navigationController?.pushViewController(movieDetailsController, animated: true)
+        header.appHeaderHorozzontalController.didSelectHandler = { [weak self] searchResult in
+            let movieDetailsController = MovieDetailsController()
+            movieDetailsController.searchResult = searchResult
+            movieDetailsController.view.backgroundColor = .systemBackground
+            self?.navigationController?.pushViewController(movieDetailsController, animated: true)
         }
         return header
     }
@@ -82,7 +82,6 @@ class DiscoverViewController: BaseListController, UICollectionViewDelegateFlowLa
             dispatchGroup.leave()
             group1 = searchResults
         }
-        
         dispatchGroup.enter()
         Service.sharedService.fetchDiscoverActionAdventure { (searchResults, error) in
             dispatchGroup.leave()
@@ -127,7 +126,7 @@ class DiscoverViewController: BaseListController, UICollectionViewDelegateFlowLa
         }
         
     }
-
+    
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return groups.count
@@ -155,7 +154,7 @@ class DiscoverViewController: BaseListController, UICollectionViewDelegateFlowLa
             
             let movieDetailsController = MovieDetailsController()
             movieDetailsController.searchResult = searchResults
-            movieDetailsController.navigationItem.title = searchResults.original_title
+            movieDetailsController.navigationItem.title = searchResults.title
             movieDetailsController.navigationItem.largeTitleDisplayMode = .automatic
             self?.navigationController?.pushViewController(movieDetailsController, animated: true)
         }

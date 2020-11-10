@@ -26,7 +26,6 @@ class DiscoverResultsCell: UICollectionViewCell {
     }
 }
 
-
 fileprivate extension DiscoverResultsCell {
     
      func setupDiscoverResultsCell() {

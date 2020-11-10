@@ -18,9 +18,7 @@ class MovieDetailsController: BaseListControllerMovieDetail, UICollectionViewDel
     
     fileprivate var genreArray = [Genres]()
     fileprivate var castArray = [Cast]()
-    
-    
-    
+        
     override func viewDidLoad() {
         //changes the status bar to white
         navigationController?.navigationBar.barStyle = .black
@@ -30,7 +28,7 @@ class MovieDetailsController: BaseListControllerMovieDetail, UICollectionViewDel
     override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: headerId, for: indexPath) as! HeaderCell
         
-        header.heavyLabel.text = searchResult.original_title
+        header.heavyLabel.text = searchResult.title
         header.imageView.sd_setImage(with: URL(string: "https://image.tmdb.org/t/p/w500/\(searchResult.backdrop_path ?? "")" ))
         return header
     }
@@ -65,14 +63,16 @@ class MovieDetailsController: BaseListControllerMovieDetail, UICollectionViewDel
             
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: castReuseIdentifier, for: indexPath) as! CastCell
             
-            cell.horizontalController.didSelectHandler = { [weak self] cast in
-                let redcontroller = UIViewController()
-                redcontroller.view.backgroundColor = .red
-                redcontroller.navigationItem.title = cast.character
-                self?.navigationController?.pushViewController(redcontroller, animated: true)
+            cell.horizontalController.didSelectHandler = { [weak self] searchResult in
+                let castController = CastDetailsController()
+                castController.castResult = searchResult
+                castController.navigationItem.title = searchResult.name
+                castController.setup()
+                
+                self?.navigationController?.pushViewController(castController, animated: true)
             }
             return cell.getSearchRequest(searchResult: searchResult)
-        } else {
+        } else  {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: previewCellId, for: indexPath) as! PreviewCell
             return cell.getSearchRequest(searchResult: searchResult)
         }
@@ -81,27 +81,26 @@ class MovieDetailsController: BaseListControllerMovieDetail, UICollectionViewDel
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        //var height: CGFloat = 280
         if indexPath.item == 0 {
             
             //calculate the necesary size somehow
-            let dummyCell = MovieDetailsCell(frame: .init(x: 0, y: 0, width: view.frame.width, height: 2000))
-            dummyCell.titleLabel.text = searchResult.original_title
-            dummyCell.releaseDateLabel.text = searchResult.release_date
+            let movieDetailsCell = MovieDetailsCell(frame: .init(x: 0, y: 0, width: view.frame.width, height: 2000))
+            movieDetailsCell.titleLabel.text = searchResult.title
+            movieDetailsCell.releaseDateLabel.text = searchResult.release_date
             if let voteAverage = searchResult.vote_average {
-                dummyCell.ratingLabel.text = String(format: "%.2f", voteAverage)
+                movieDetailsCell.ratingLabel.text = String(format: "%.2f", voteAverage)
             }
-            dummyCell.castLabel.text =  "Description"
-            dummyCell.descriptionTextLabel.text = searchResult.overview
-            dummyCell.layoutIfNeeded()
-            let estimatedSize = dummyCell.systemLayoutSizeFitting(.init(width: view.frame.width, height: 1000))
+            movieDetailsCell.castLabel.text =  "Description"
+            movieDetailsCell.descriptionTextLabel.text = searchResult.overview
+            movieDetailsCell.layoutIfNeeded()
+            let estimatedSize = movieDetailsCell.systemLayoutSizeFitting(.init(width: view.frame.width, height: 1000))
             // height = estimatedSize.height
             return .init(width: view.frame.width, height: estimatedSize.height)
         } else if indexPath.item == 1 {
             return .init(width: view.frame.width, height: 310)
         } else {
-            let dummyCell = PreviewCell(frame: .init(x: 0, y: 0, width: view.frame.width, height: view.frame.height))
-            dummyCell.sectionTitle.text =  "Images"
+            let previewCell = PreviewCell(frame: .init(x: 0, y: 0, width: view.frame.width, height: view.frame.height))
+            previewCell.sectionTitle.text =  "Images"
             
             return .init(width: view.frame.width, height: 295)
         }
@@ -129,7 +128,6 @@ fileprivate extension MovieDetailsController {
         }
     }
     
-    
     func setup() {
         super.viewDidLoad()
         setupCollectionView()
@@ -141,10 +139,9 @@ fileprivate extension MovieDetailsController {
         getData()
     }
     
-    
     func getData() {
         
-        let urlString = "https://api.themoviedb.org/3/movie/\(searchResult.id)/credits?api_key=6c585d930b6b55e72e3e31c6506a6ee4"
+        let urlString = "https://api.themoviedb.org/3/movie/\(searchResult.id)/credits?api_key=\(Constants.apiKey)"
         Service.sharedService.fetchGenericJSONData(urlString:urlString) { [weak self](result: CastResult?, error) in
             
             guard let theSelf = self else { return }
@@ -157,7 +154,6 @@ fileprivate extension MovieDetailsController {
                 
                 theSelf.genreArray =  array
             }
-            
             DispatchQueue.main.async {
                 theSelf.collectionView.reloadData()
             }

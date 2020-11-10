@@ -13,7 +13,8 @@ class CastHorizontalController: HorizontalSnappingController, UICollectionViewDe
     var searchResult: Result!
     fileprivate var castArray = [Cast]()
     var didSelectHandler: ((Cast) -> ())?
-
+    
+    
     let cellId = "cellId"
 
     override func viewDidLoad() {
@@ -27,6 +28,11 @@ class CastHorizontalController: HorizontalSnappingController, UICollectionViewDe
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return castArray.count
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let cast = castArray[indexPath.item]
+        didSelectHandler?(cast)
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -60,7 +66,7 @@ fileprivate extension CastHorizontalController {
     
     func getData() {
         
-        let urlString = "https://api.themoviedb.org/3/movie/\(searchResult.id)/credits?api_key=6c585d930b6b55e72e3e31c6506a6ee4"
+        let urlString = "https://api.themoviedb.org/3/movie/\(searchResult.id)/credits?api_key=\(Constants.apiKey)"
         
         Service.sharedService.fetchGenericJSONData(urlString: urlString) { [weak self](result: CastResult?, error) in
             

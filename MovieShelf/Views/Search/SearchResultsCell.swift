@@ -8,7 +8,6 @@
 
 import UIKit
 
-
 fileprivate func setupImageView() -> UIImageView {
     
     let iv = UIImageView()
@@ -28,7 +27,7 @@ class SearchResultsCell: UICollectionViewCell {
         didSet {
             let url = URL(string: "https://image.tmdb.org/t/p/w500/\(movieResult.poster_path ?? "")")
             moviePosterImageView.sd_setImage(with: url)
-            nameLabel.text = movieResult.original_title ?? ""
+            nameLabel.text = movieResult.title ?? ""
             releaseDate.text = movieResult.release_date ?? ""
             if let voteAverage = movieResult.vote_average {
                 if voteAverage == 0 {

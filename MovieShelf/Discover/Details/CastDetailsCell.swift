@@ -16,11 +16,22 @@ class CastDetailsCell: UICollectionViewCell {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
+        backgroundColor = .systemBackground
+
+        setUpCastDetailsCell()
+    }
+    required init?(coder: NSCoder) {
+        fatalError()
+    }
+}
+
+fileprivate extension CastDetailsCell {
+    
+    func setUpCastDetailsCell() {
         characterLabel.textColor = .systemPink
         
-        profileImageView.constrainWidth(constant: 130)
-        profileImageView.constrainHeight(constant: 180)
+        profileImageView.constrainWidth(constant: 140)
+        profileImageView.constrainHeight(constant: 200)
         
         let stackView = VerticalStackView(arrangeSubViews: [
             UIStackView(arrangedSubviews: [
@@ -34,8 +45,5 @@ class CastDetailsCell: UICollectionViewCell {
         ], spacing: 5)
         addSubview(stackView)
         stackView.fillSuperview(padding: .init(top: 3, left: 5, bottom: 5, right: 25))
-    }
-    required init?(coder: NSCoder) {
-        fatalError()
     }
 }

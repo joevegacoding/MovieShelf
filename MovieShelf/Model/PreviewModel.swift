@@ -9,7 +9,7 @@
 import Foundation
 
 struct BackdropResult: Decodable {
-    let backdrops: [Backdrops]    
+    let backdrops: [Backdrops]
 }
 
 struct Backdrops: Decodable {

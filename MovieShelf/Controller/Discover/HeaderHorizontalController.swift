@@ -48,7 +48,7 @@ class HeaderHorizontalController: HorizontalSnappingController, UICollectionView
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! MovieHeaderCell
         
         let app = self.movieResult[indexPath.item]
-        cell.movieTitleLabel.text = app.original_title
+        cell.movieTitleLabel.text = app.title
         cell.descriptionLabel.text = app.overview
         cell.imageView.sd_setImage(with: URL(string: "https://image.tmdb.org/t/p/w500/\(app.backdrop_path ?? "")" ))
         
