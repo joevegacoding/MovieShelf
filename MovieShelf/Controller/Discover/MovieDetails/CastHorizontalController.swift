@@ -58,6 +58,8 @@ fileprivate extension CastHorizontalController {
         collectionView.backgroundColor = .systemBackground
         collectionView.register(CastDetailsCell.self, forCellWithReuseIdentifier: cellId)
         collectionView.contentInset = .init(top: 0, left: 12, bottom: 0, right: 12)
+        collectionView.showsHorizontalScrollIndicator = false
+
     }
     
     func setup() {

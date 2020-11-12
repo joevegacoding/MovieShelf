@@ -36,6 +36,7 @@ class DiscoverViewController: BaseListController, UICollectionViewDelegateFlowLa
         loadingIndicatorView.fillSuperview()
         
         fetchData()
+        collectionView.showsHorizontalScrollIndicator = false
     }
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         

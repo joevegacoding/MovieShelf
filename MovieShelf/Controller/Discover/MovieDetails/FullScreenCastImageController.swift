@@ -29,6 +29,7 @@ class FullScreenCastImageController: HorizontalSnappingController, UICollectionV
         collectionView.register(FullScreenCastImageCell.self, forCellWithReuseIdentifier: fullImageid)
         collectionView.contentInset = .init(top: 0, left: 0, bottom: 0, right: 10)
         navigationItem.largeTitleDisplayMode = .never
+        collectionView.showsHorizontalScrollIndicator = false
     }
     
     @objc func toggle() {

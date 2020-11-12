@@ -36,6 +36,8 @@ class PreviewController: HorizontalSnappingController, UICollectionViewDelegateF
         collectionView.register(ScreenshotCell.self, forCellWithReuseIdentifier: cellId)
         collectionView.contentInset = .init(top: 35, left: 0, bottom: 40, right: 5)
         collectionView.backgroundColor = .systemBackground
+        collectionView.showsHorizontalScrollIndicator = false
+
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {

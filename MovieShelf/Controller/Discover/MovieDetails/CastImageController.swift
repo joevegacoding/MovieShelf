@@ -37,6 +37,7 @@ class CastImageController: HorizontalSnappingController, UICollectionViewDelegat
         collectionView.register(HorizontalImageCastCell.self, forCellWithReuseIdentifier: cellId)
         collectionView.backgroundColor = .systemBackground
         collectionView.contentInset = .init(top: 5, left: 10, bottom: 35, right: 10)
+        collectionView.showsHorizontalScrollIndicator = false
     }
     
     func getSetup() {

@@ -23,6 +23,7 @@ class HorizontalSnappingController: UICollectionViewController {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
 }
 
 class SnappingLayout: UICollectionViewFlowLayout {
@@ -51,6 +52,7 @@ class SnappingLayout: UICollectionViewFlowLayout {
         return CGPoint(x: nearestPageOffset,
                        y: parent.y)
     }
+    
 }
 
 

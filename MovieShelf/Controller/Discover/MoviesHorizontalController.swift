@@ -55,7 +55,7 @@ class MoviesHorizontalController: HorizontalSnappingController, UICollectionView
         }
         
         collectionView.backgroundColor = .systemBackground
-        
+        collectionView.showsHorizontalScrollIndicator = false
         collectionView.register(MovieRowCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         collectionView.contentInset = .init(top: 0, left: 14, bottom: 0, right: 14)
     }

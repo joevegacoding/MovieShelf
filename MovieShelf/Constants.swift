@@ -10,5 +10,5 @@ import UIKit
 
 struct Constants {
     
-    static let apiKey: String = "[API_KEY]"
+    static let apiKey: String = "6c585d930b6b55e72e3e31c6506a6ee4"
 }

@@ -15,7 +15,7 @@ class HeaderCell: UICollectionReusableView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
+    
         addSubview(imageView)
         imageView.fillSuperview()
         setupGradientLayer()
