@@ -14,4 +14,4 @@ Light Mode            |  Dark Mode
 
 
 ## Author
-This project was made by me, Joseph Bouhanef. If you have any questions, don't hesitate to contact met on Twitter[@JosephCodes_](https://twitter.com/JosephCodes_)
+This project was made by me, Joseph Bouhanef. If you have any questions, don't hesitate to contact me on Twitter[@JosephCodes_](https://twitter.com/JosephCodes_)
